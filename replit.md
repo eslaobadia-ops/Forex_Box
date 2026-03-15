@@ -1,5 +1,16 @@
 # Workspace
 
+## Forex Signal Bot
+
+A Python bot that monitors EUR/USD on 15-minute candles using EMA 50 + RSI 14 and sends trade signals to Telegram.
+
+- **Script**: `bot/forex_signal_bot.py`
+- **Workflow**: "Forex Signal Bot" (console, auto-start)
+- **Strategy**: BUY when price > EMA50 and RSI crosses above 30; SELL when price < EMA50 and RSI crosses below 70
+- **Secrets required**: `TG_TOKEN` (Telegram bot token), `TG_CHAT_ID` (Telegram chat ID)
+- **Data source**: Yahoo Finance via `yfinance`
+- **Packages**: `requests`, `pandas`, `pandas-ta`, `yfinance` (installed via pip)
+
 ## Overview
 
 pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
